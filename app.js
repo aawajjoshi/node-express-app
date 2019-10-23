@@ -18,34 +18,34 @@ const port = process.env.PORT || config.get("port");
 
 // declare your callback function the old way
 app.get('/', function (req, res) {
-  res.send('Welcome to the default page!  <br> <br>' +
-    'Try going to different URIs by adding these at the end: <br> <br>' +
-    '/hello <br>' +
-    '/big <br>' +
+  res.send('Welcome to my home page!!!  <br> <br>' +
+    'Try the following: <br> <br>' +
+    '/myname <br>' +
+    '/major <br>' +
     '/json <br>' +
     '/greeting/yourname <br>' +
-    '/yo/Dr.Rogers <br>' +
+    '/yo/Aawaj <br>' +
     '/fortune <br>' +
-    '/fancy/?first=Denise&last=Case <br>' +
+    '/fancy/?first=Aawaj&last=Joshi <br>' +
     '<br> <br>' +
-    'Fork the source code from <a href="https://github.com/denisecase/node-express-app">https://github.com/denisecase/node-express-app</a>'
+    'Fork the source code from <a href="https://github.com/aawajjoshi/node-express-app">My Repo!</a>'
   )
 })
 
 // or use the new arrow function syntax
 // respond with text
-app.get('/hello', (req, res) => {
-  res.send('Hello World!')
+app.get('/myname', (req, res) => {
+  res.send('<h1>Hi, I am Aawaj!<h1>')
 })
 
 // or respond with html
-app.get('/big', (req, res) => {
-  res.send('<h1>Hello World!</h1>')
+app.get('/major', (req, res) => {
+  res.send('Computer Science')
 })
 
 // or respond with JSON
 app.get('/json', (req, res) => {
-  res.send('{"name" : "Nandini"}')
+  res.send('{"love" : "Dumplings"}')
 })
 
 // :name indicates a parameter at this location in the URI
